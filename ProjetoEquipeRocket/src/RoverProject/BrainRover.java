@@ -84,13 +84,13 @@ public class BrainRover {
                         if (position == "N") {
                             position = "W";
                         }
-                        if (position == "S") {
+                        else if (position == "S") {
                             position = "E";
                         }
-                        if (position == "E") {
+                        else if (position == "E") {
                             position = "N"; 
                         }
-                        if (position == "W") {
+                        else if (position == "W") {
                             position = "S";
                         }
                         break;
@@ -99,13 +99,13 @@ public class BrainRover {
                         if (position == "N") {
                             position = "E";
                         }
-                        if (position == "S") {
+                        else if (position == "S") {
                             position = "W";
                         }
-                        if (position == "E") {
+                        else if (position == "E") {
                             position = "S"; 
                         }
-                        if (position == "W") {
+                        else if (position == "W") {
                             position = "N";
                         }
                         break;
@@ -114,13 +114,13 @@ public class BrainRover {
                         if (position == "N") {
                             y++;
                         }
-                        if (position == "S") {
+                        else if (position == "S") {
                             y--;
                         }
-                        if (position == "E") {
+                        else if (position == "E") {
                             x++; 
                         }
-                        if (position == "W") {
+                        else if (position == "W") {
                             x--; 
                         }
                         break;
