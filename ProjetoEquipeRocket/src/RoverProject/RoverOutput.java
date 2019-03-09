@@ -18,7 +18,7 @@ public class RoverOutput {
         // TODO code application logic here
         
          BrainRover.grid( 2, 2 );
-         System.out.println(BrainRover.initialPosition(3, 3, "s"));
+         System.out.println(BrainRover.initialPosition(1, 1, "S"));
          
         
         
