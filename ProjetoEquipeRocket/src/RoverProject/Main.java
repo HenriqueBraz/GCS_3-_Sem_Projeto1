@@ -17,7 +17,9 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        System.out.println(GridMap.somar( 2, 2 ));
+         BrainRover.grid( 2, 2 );
+         System.out.println(BrainRover.initialPosition(3, 3, "s"));
+         
         
         
     }
