@@ -9,6 +9,6 @@ package RoverProject;
  *
  * @author Henrique
  */
-public class RoverInput {
+public class RoverOutput {
     
 }

@@ -8,7 +8,7 @@ package RoverProject;
 /**
  *Legenda de retornos:
  * 1 ---> OK
- * -1 ---> NullPointerException
+ * -1 ---> RuntimeException
  * -2 ---> Erro de coordenadas fora do platô, colisão ou
  * queda (o Rover não executará a ação para erros de código2)
  * Os pontos cardeais N,S,E,W devem ser uma String upperCase
@@ -37,9 +37,9 @@ public class BrainRover {
             lengthx = a;
             lengthy = b;
             return 1;
-        } catch (NullPointerException e) {
+        } catch (RuntimeException e) {
 
-            System.out.println("Erro:" + e);
+            System.out.println("Erro: -1: " + e.getMessage());
             return -1;
         }
     }
@@ -68,7 +68,7 @@ public class BrainRover {
             }
         } catch (NullPointerException e) {
 
-            System.out.println("Erro: -1: " + e);
+            System.out.println("Erro: -1: " + e.getMessage());
             return -1;
         }
         return 1;
@@ -134,7 +134,7 @@ public class BrainRover {
         return retorno;
         }catch(NullPointerException e){
                 
-            System.out.println("Erro -1:" + e);
+            System.out.println("Erro -1:" + e.getMessage());
         }
         return null;
     }

@@ -11,7 +11,7 @@ import java.util.Arrays;
  *
  * @author Henrique
  */
-public class RoverOutput {
+public class RoverInput {
 
     /**
      * @param args the command line arguments
