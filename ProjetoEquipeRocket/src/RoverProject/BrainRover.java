@@ -5,8 +5,6 @@
  */
 package RoverProject;
 
-import java.util.HashMap;
-
 /**
  *Legenda de retornos:
  * 1 ---> OK
@@ -70,72 +68,75 @@ public class BrainRover {
             }
         } catch (NullPointerException e) {
 
-            System.out.println("Erro:" + e);
+            System.out.println("Erro: -1: " + e);
             return -1;
         }
         return 1;
     }
 
-    public static int roverMove(String[] comandos) {
+    public static String[] roverMove(String[] comandos) {
 
         try {
             for (int i = 0; i < comandos.length; i++) {
-
                 switch (comandos[i]) {
 
-                    case "N":
-                        if (comandos[i] == "L") {
+                    case "L":
+                        if (position == "N") {
                             position = "W";
                         }
-                        if (comandos[i] == "R") {
+                        if (position == "S") {
                             position = "E";
                         }
-                        if (comandos[i] == "M") {
-                            y++;    
+                        if (position == "E") {
+                            position = "N"; 
+                        }
+                        if (position == "W") {
+                            position = "S";
                         }
                         break;
-                    case "S":
-                        if (comandos[i] == "L") {
-                            position = "W";
-                        }
-                        if (comandos[i] == "R") {
+                        
+                    case "R":
+                        if (position == "N") {
                             position = "E";
                         }
-                        if (comandos[i] == "M") {
+                        if (position == "S") {
+                            position = "W";
+                        }
+                        if (position == "E") {
+                            position = "S"; 
+                        }
+                        if (position == "W") {
+                            position = "N";
+                        }
+                        break;
+                        
+                    case "M":
+                        if (position == "N") {
+                            y++;
+                        }
+                        if (position == "S") {
                             y--;
                         }
-                        break;
-                    case "E":
-                        if (comandos[i] == "L") {
-                            position = "N";
+                        if (position == "E") {
+                            x++; 
                         }
-                        if (comandos[i] == "R") {
-                            position = "S";
-                        }
-                        if (comandos[i] == "M") {
-                            x++;
+                        if (position == "W") {
+                            x--; 
                         }
                         break;
-                    case "W":
-                        if (comandos[i] == "L") {
-                            position = "S";
-                        }
-                        if (comandos[i] == "R") {
-                            position = "N";
-                        }
-                        if (comandos[i] == "M") {
-                            x--;
-                        }
-                        break;
+                        
                 }
 
             }
-        return 1;
+        String stringX = Integer.toString(x);
+        String stringY = Integer.toString(y);
+        String [] retorno = {stringX,stringY,position};    
+        return retorno;
         }catch(NullPointerException e){
                 
-            System.out.println("Erro:" + e);
-        return -1;
+            System.out.println("Erro -1:" + e);
         }
+        return null;
     }
 
 }

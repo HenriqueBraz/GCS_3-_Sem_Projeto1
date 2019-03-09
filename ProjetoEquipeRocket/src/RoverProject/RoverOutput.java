@@ -5,6 +5,8 @@
  */
 package RoverProject;
 
+import java.util.Arrays;
+
 /**
  *
  * @author Henrique
@@ -17,8 +19,10 @@ public class RoverOutput {
     public static void main(String[] args) {
         // TODO code application logic here
         
-         BrainRover.grid( 2, 2 );
-         System.out.println(BrainRover.initialPosition(1, 1, "S"));
+         String[] comandos = {"L","M","L","M","L","M","L","M","M"}; 
+         BrainRover.grid( 5, 5 );
+         BrainRover.initialPosition(1, 2,"N");
+         System.out.println(Arrays.toString(BrainRover.roverMove(comandos)));
          
         
         
