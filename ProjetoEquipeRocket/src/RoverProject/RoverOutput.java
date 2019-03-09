@@ -9,7 +9,7 @@ package RoverProject;
  *
  * @author Henrique
  */
-public class Main {
+public class RoverOutput {
 
     /**
      * @param args the command line arguments
