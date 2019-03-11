@@ -8,7 +8,7 @@ package RoverProject;
 /**
  *Legenda de retornos:
  * 1 ---> OK
- * -1 ---> RuntimeException
+ * -1 ---> Exception
  * -2 ---> Erro de coordenadas fora do platô  ou perigo de
  * queda (o Rover não executará a ação para erros de código -2)
  * Os pontos cardeais N,S,E,W devem ser uma String upperCase
